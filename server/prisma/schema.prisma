@@ -12,7 +12,7 @@ model User {
     name String?
     email String @unique
     image String?
-    bookedVisite Json[] 
+    bookedVisits Json[] 
     favResidenciesID String[] @db.ObjectId
     ownedResidencies Residency[] @relation("Owner")
 
