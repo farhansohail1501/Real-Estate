@@ -1,7 +1,12 @@
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
 
 function App() {
-  return (
-    <span>subscribe Zainkeepscode</span>
+  return(
+<div className="App">
+  <Header />
+  <Hero />
+</div>
   );
 }
 
