@@ -19,7 +19,7 @@ const Value = () => {
                 {/* left side*/}
                 <div className="v-left">
                     <div className="image-container">
-                        <img src='./value1.jpg' alt='' />
+                        <img src='./Value.jpg' alt='' />
                     </div>
 
                 </div>
