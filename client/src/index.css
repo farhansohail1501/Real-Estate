@@ -17,6 +17,9 @@
   font-family: "Merriweather", sans-serif;
   scroll-behavior: smooth;
 }
+.wrapper{
+  background-color: white;
+}
 a {
   color: inherit;
   text-decoration: none;
