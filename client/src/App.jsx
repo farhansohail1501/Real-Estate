@@ -7,6 +7,7 @@ import Properties from './pages/Properties/Properties';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ToastContainer } from 'react-toastify';
+import Property from './pages/Property/Property';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -15,18 +16,22 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        <Route element={<Layout />}>
-        <Route path="/" element={<Website />} />
-        <Route path="/properties" element={<Properties />} />
-        </Route>
-      </Routes>
-    </Suspense>
-    </BrowserRouter>
-    <ToastContainer />
-    <ReactQueryDevtools initialIsOpen={false} />
+      <BrowserRouter>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Website />} />
+              <Route path="/properties">
+                <Route index element={<Properties />} />
+                <Route path=":propertyId" element={<Property />} />
+
+              </Route>
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+      <ToastContainer />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 }
